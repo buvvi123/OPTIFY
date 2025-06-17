@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</style>
+</head>
+<body>
+    <header>
+        <h1>K.lakshmipathi</h1>
+        <p>Full Stack Developer | Python</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm k.lakshmipathi, passionate about technology.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML,CSS</li>
+            <li>JavaScript</li>
+            <li>MERN</li>
+			
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>B.Tech from SDTN</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email:lakshmipathi0@gmail.com</p>
+        <p>LinkedIn: https://www.linkedin.com/in/k-lakshmipathi-a696356</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 . All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

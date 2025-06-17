@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+.post {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog App</title>
+    <link rel="stylesheet" href="styles.css">
+</style
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+
+    <main id="blog-container"></main>
+
+    <script src="script.js">
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("posts.json")
+        .then(response => response.json())
+        .then(posts => {
+            const blogContainer = document.getElementById("blog-container");
+
+            posts.forEach(post => {
+                const postElement = document.createElement("div");
+                postElement.classList.add("post");
+                postElement.innerHTML = `
+                    <h2>${post.title}</h2>
+                    <p>${post.content}</p>
+                `;
+                blogContainer.appendChild(postElement);
+            });
+        })
+        .catch(error => console.error("Error loading posts:", error));
+});
+<script id="json-data" type="application/json">
+    [
+        { "title": "Post 1", "content": "This is the first post." },
+        { "title": "Post 2", "content": "This is the second post." }
+    ]
+</script>
+
+<script>
+    const jsonData = document.getElementById("json-data").textContent;
+    const posts = JSON.parse(jsonData);
+
+    const blogContainer = document.getElementById("blog-container");
+
+    posts.forEach(post => {
+        const postElement = document.createElement("div");
+        postElement.classList.add("post");
+        postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+        blogContainer.appendChild(postElement);
+    });
+</script>
+</script>
+</body>
+</html>
